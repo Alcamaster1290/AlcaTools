@@ -4,6 +4,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import streamlit as st
 import numpy as np
+from google_analytics import inject_ga
+
+inject_ga()
 
 @st.cache_data
 def load_player_stats(input_dir):
