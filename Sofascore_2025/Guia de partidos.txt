@@ -1,0 +1,53 @@
+Sofascore_13123301 -> Peru U20 vs Paraguay U20 | CONMEBOL U20 2025
+Sofascore_13270261 -> Chile U20 vs Peru U20    | CONMEBOL U20 2025
+Sofascore_13293516 -> Peru U20 vs Venezuela U20| CONMEBOL U20 2025
+Sofascore_13270253 -> Uruguay U20 vs Peru U20  | CONMEBOL U20 2025
+
+Sofascore_13253307 -> Nacional vs Alianza Lima | Copa Libertadores 2025 F1
+Sofascore_13253308 -> Alianza Lima vs Nacional | Copa Libertadores 2025 F1
+Sofascore_13470004 -> Alianza Lima vs Boca Jrs | Copa Libertadores 2025 F2
+Sofascore_13470005 -> Boca Jrs vs Alianza Lima | Copa Libertadores 2025 F2
+Sofascore_13537256 -> DIquique vs Alianza Lima | Copa Libertadores 2025 F3
+
+Sofascore_13352931 -> Alianza Lima vs Cusco FC | Liga 1 2025 J1
+Sofascore_13352939 -> Sport Huancayo vs AAS    | Liga 1 2025 J1
+Sofascore_13352933 -> Melgar vs UTC            | Liga 1 2025 J1
+Sofascore_13352937 -> Grau vs Ayacucho         | Liga 1 2025 J1
+Sofascore_13352938 -> AUDH vs Cristal          | Liga 1 2025 J1
+Sofascore_13352936 -> Sport Boys vs JPII       | Liga 1 2025 J1
+Sofascore_13352932 -> Comerciantes vs U        | Liga 1 2025 J1
+Sofascore_13352934 -> Cienciano vs ADT         | Liga 1 2025 J1
+Sofascore_13352935 -> Chankas vs Garcilaso     | Liga 1 2025 J1
+
+Sofascore_13387751 -> AAS vs Alianza Lima      | Liga 1 2025 J2
+Sofascore_13387758 -> Cusco FC vs Melgar       | Liga 1 2025 J2
+Sofascore_13387752 -> UTC vs Binacional        | Liga 1 2025 J2
+Sofascore_13387755 -> ADT vs Grau              | Liga 1 2025 J2
+Sofascore_13387756 -> U vs Cienciano           | Liga 1 2025 J2
+Sofascore_13387757 -> Cristal vs Sport Boys    | Liga 1 2025 J2
+Sofascore_13387753 -> JPII vs Huancayo         | Liga 1 2025 J2
+Sofascore_13387754 -> Garcilaso vs Comerciantes| Liga 1 2025 J2
+Sofascore_13387759 -> Ayacucho vs AUDH         | Liga 1 2025 J2
+
+Sofascore_13387774 -> Alianza Lima vs JPII     | Liga 1 2025 J3
+Sofascore_13387770 -> Sport Boys vs Ayacucho   | Liga 1 2025 J3
+Sofascore_13387767 -> Cienciano vs Garcilaso   | Liga 1 2025 J3
+Sofascore_13387766 -> Sport Huancayo vs Cristal| Liga 1 2025 J3
+Sofascore_13387772 -> Binacional vs Cusco FC   | Liga 1 2025 J3
+Sofascore_13387773 -> AUDH vs ADT  	       | Liga 1 2025 J3
+Sofascore_13387769 -> Melgar vs AAS  	       | Liga 1 2025 J3
+Sofascore_13387771 -> Comerciantes vs Chankas  | Liga 1 2025 J3
+
+Sofascore_13523624 -> Ayacucho vs Sp. Huancayo | Liga 1 2025 J4
+Sofascore_13523626 -> Cristal vs Alianza Lima  | Liga 1 2025 J4
+Sofascore_13523644 -> AAS vs Binacional        | Liga 1 2025 J4
+Sofascore_13523647 -> Cusco FC vs UTC          | Liga 1 2025 J4
+Sofascore_13523648 -> Garcilaso vs Grau        | Liga 1 2025 J4
+Sofascore_13523646 -> ADT vs Sport Boys	       | Liga 1 2025 J4
+
+PARTIDOS POSPUESTOS:
+Sofascore_ -> Grau vs U  	     | Liga 1 2025 J3 | Fecha: 
+Sofascore_ -> Chankas vs Cienciano   | Liga 1 2025 J4 | Fecha: 23/3/2025
+Sofascore_ -> Juan Pablo II vs Melgar| Liga 1 2025 J4 | Fecha: 
+
+
