@@ -59,7 +59,7 @@ def plot_metrics(df, metrics, metric_labels, per90=True):
             palette=cmap,  
             hue_norm=(df[column].min(), df[column].max()),  # Normalización de colores
             alpha=0.7,  
-            size=13,
+            size=11,
             legend=None
         )
 
