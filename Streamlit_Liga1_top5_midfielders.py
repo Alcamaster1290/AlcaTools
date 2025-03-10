@@ -6,6 +6,7 @@ import streamlit as st
 import numpy as np
 from google_analytics import inject_ga
 
+st.set_page_config(page_title="AlcaTools by AlvaroCC", layout='wide')
 inject_ga()
 
 @st.cache_data
@@ -80,7 +81,7 @@ def plot_metrics(df, metrics, metric_labels, per90=True):
     fig.subplots_adjust(hspace=0.8)
     return fig  
 
-st.set_page_config(page_title="AlcaTools by AlvaroCC", layout='wide')
+
 st.title("Análisis de Mediocampistas | Liga 1 Perú 2025")
 
 input_dir = "Sofascore_2025/Liga 1 2025"
