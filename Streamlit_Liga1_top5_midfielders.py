@@ -112,9 +112,9 @@ def plot_metrics(df, metrics, metric_labels, per90=True):
     return fig  
 
 st.set_page_config(
-        page_title="GRONESTATS by AlvaroCC",
+        page_title="AlcaTools by AlvaroCC",
         layout='wide')
-st.title("Análisis de Mediocampistas | Liga 1 Perú")
+st.title("Análisis de Mediocampistas | Liga 1 Perú 2025")
 
 input_dir = "Sofascore_2025/Liga 1 2025"
 
