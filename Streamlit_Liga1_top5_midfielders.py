@@ -148,15 +148,12 @@ import io
 if submit_button:
     metrics = ["keyPass", "accuratePass", "accurateLongBalls", "accurateCross"]
     metric_labels = ["Pases de Gol", "Pases Precisos", "Balones Largos Precisos", "Centros Precisos"]
-    
+
     df = load_player_stats(input_dir)
     midfielders = preprocess_data(df, min_minutes_played)
     midfielders_per90 = normalize_per_90(midfielders, metrics)
-    
-    if metric_choice == "Por 90 minutos":
-        fig = plot_metrics(midfielders_per90, metrics, metric_labels, per90=True)
-    else:
-        fig = plot_metrics(midfielders, metrics, metric_labels, per90=False)
+
+    fig = plot_metrics(midfielders_per90 if metric_choice == "Por 90 minutos" else midfielders, metrics, metric_labels, per90=(metric_choice == "Por 90 minutos"))
 
     st.pyplot(fig)
 
@@ -166,12 +163,8 @@ if submit_button:
     buf.seek(0)
 
     # Botón de descarga
-    st.download_button(
-        label="Descargar gráfico",
-        data=buf,
-        file_name="top5_mediocampistas_L1.png",
-        mime="image/png"
-    )
+    st.download_button("Descargar gráfico", buf, file_name="grafico.png", mime="image/png")
+
 
 st.markdown(
     "<p style='font-size: 12px; text-align: center; color: gray;'>"
