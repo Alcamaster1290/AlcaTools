@@ -127,7 +127,7 @@ with st.form(key="filter_form"):
     max_minutes_played = 90 * num_semanas
     half_max_minutes_played = int(round(max_minutes_played / 2, 1))
     min_minutes_played = st.slider("Selecciona el mínimo de minutos jugados", 90, max_minutes_played, half_max_minutes_played, step=5)
-    metric_choice = st.radio("Selecciona el tipo de métrica:", ["Por 90 minutos", "Totales"])
+    metric_choice = st.radio("Selecciona el tipo de métrica:", ["Totales","Por 90 minutos"])
     submit_button = st.form_submit_button(label="Imprimir gráfico")
 
 if submit_button:
@@ -142,3 +142,12 @@ if submit_button:
         st.pyplot(plot_metrics(midfielders_per90, metrics, metric_labels, per90=True))
     else:
         st.pyplot(plot_metrics(midfielders, metrics, metric_labels, per90=False))
+
+st.markdown(
+    "<p style='font-size: 12px; text-align: center; color: gray;'>"
+    "Sígueme en mis redes: <a href='https://lnk.bio/alvarocc' target='_blank' style='color: lightblue;'>lnk.bio/alvarocc</a><br>"
+    "IG: <a href='https://www.instagram.com/gronestatistics' target='_blank' style='color: lightblue;'>@gronestatistics</a> | "
+    "X: <a href='https://www.x.com/alkagrone' target='_blank' style='color: lightblue;'>@alkagrone</a>"
+    "</p>",
+    unsafe_allow_html=True
+)
