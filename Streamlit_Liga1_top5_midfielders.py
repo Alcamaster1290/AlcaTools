@@ -105,12 +105,13 @@ def plot_metrics(df, metrics, metric_labels, per90=True):
 
     title_text = "por 90 minutos jugados" if per90 else "valores totales"
     plt.suptitle(
-        f"TOP 5 MEDIOCAMPISTAS | Estadísticas {title_text} | LIGA 1 PERÚ",
+        f"TOP 5 MEDIOCAMPISTAS | Estadísticas {title_text} | LIGA 1 PERÚ\nJugadores con al menos {min_minutes_played} minutos jugados",
         fontsize=30, 
         color="white", 
-        weight= "bold",
+        weight="bold",
         x=0.7
     )
+
 
 
     fig.subplots_adjust(hspace=0.8)
