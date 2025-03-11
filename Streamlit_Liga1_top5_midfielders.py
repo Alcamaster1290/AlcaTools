@@ -143,6 +143,36 @@ if submit_button:
     else:
         st.pyplot(plot_metrics(midfielders, metrics, metric_labels, per90=False))
 
+import io
+
+if submit_button:
+    metrics = ["keyPass", "accuratePass", "accurateLongBalls", "accurateCross"]
+    metric_labels = ["Pases de Gol", "Pases Precisos", "Balones Largos Precisos", "Centros Precisos"]
+    
+    df = load_player_stats(input_dir)
+    midfielders = preprocess_data(df, min_minutes_played)
+    midfielders_per90 = normalize_per_90(midfielders, metrics)
+    
+    if metric_choice == "Por 90 minutos":
+        fig = plot_metrics(midfielders_per90, metrics, metric_labels, per90=True)
+    else:
+        fig = plot_metrics(midfielders, metrics, metric_labels, per90=False)
+
+    st.pyplot(fig)
+
+    # Guardar el gráfico en un buffer de memoria
+    buf = io.BytesIO()
+    fig.savefig(buf, format="png", bbox_inches="tight", dpi=300)
+    buf.seek(0)
+
+    # Botón de descarga
+    st.download_button(
+        label="Descargar gráfico",
+        data=buf,
+        file_name="top5_mediocampistas_L1.png",
+        mime="image/png"
+    )
+
 st.markdown(
     "<p style='font-size: 12px; text-align: center; color: gray;'>"
     "Sígueme en mis redes: <a href='https://lnk.bio/alvarocc' target='_blank' style='color: lightblue;'>lnk.bio/alvarocc</a><br>"
