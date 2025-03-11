@@ -53,8 +53,8 @@ def plot_metrics(df, metrics, metric_labels, per90=True):
 
     for i, (metric, label) in enumerate(zip(metrics, metric_labels)):
         column = f"{metric}_per90" if per90 else metric
-        cmap = sns.color_palette("Blues_r", as_cmap=True)  
 
+        cmap = sns.color_palette("Blues_r", as_cmap=True)  
         sns.swarmplot(
             x=df[column], 
             y=[label] * len(df),  
@@ -67,12 +67,26 @@ def plot_metrics(df, metrics, metric_labels, per90=True):
         )
 
         mean_value = df[column].mean()
+        top_players = df.nlargest(5, column)
+        table_data = [[row["shortName"], row["Equipo"], f"{row[column]:.2f}" if per90 else f"{int(row[column])}"] for _, row in top_players.iterrows()]
+        
+        table = axes[i].table(
+            cellText=table_data,
+            colLabels=["Jugador", "Equipo", label[:16]],
+            colColours=["#444444"] * 3,
+            cellLoc='center',
+            loc='right',
+            bbox=[1.05, 0, 0.5, 1.4]  
+        )
+        
+        for key, cell in table.get_celld().items():
+            cell.set_edgecolor("black")
+            font_size = 15 if key[0] == 0 else 12
+            cell.set_fontsize(font_size)
+            cell.set_text_props(weight='bold', color='yellow' if key[0] == 0 else 'black', fontsize=font_size)
+        
         axes[i].axvline(mean_value, color="yellow", linestyle="dashed", linewidth=2, label="Promedio")
-        axes[i].text(mean_value, -0.4, f"{mean_value:.2f}", color="yellow", weight='bold', fontsize=14, ha='center', va='bottom', transform=axes[i].get_xaxis_transform())
         axes[i].set_title(label, fontsize=14, color="white", loc="left", weight='bold')
-        axes[i].set_ylabel("")
-        axes[i].set_yticks([])
-        axes[i].set_xlabel("")
         axes[i].set_xlim(left=0, right=df[column].max() + 1)
         axes[i].tick_params(axis='x', colors='white')
         axes[i].patch.set_alpha(0)
@@ -97,7 +111,7 @@ with st.form(key="filter_form"):
     max_minutes_played = 90 * num_semanas
     half_max_minutes_played = int(round(max_minutes_played / 2, 1))
     min_minutes_played = st.slider("Selecciona el mínimo de minutos jugados", 90, max_minutes_played, half_max_minutes_played, step=5)
-    metric_choice = st.radio("Selecciona el tipo de métrica:", ["Totales", "Por 90 minutos"])
+    metric_choice = st.radio("Selecciona el tipo de métrica:", ["Totales","Por 90 minutos"])
     submit_button = st.form_submit_button(label="Imprimir gráfico")
 
 if submit_button:
@@ -110,11 +124,8 @@ if submit_button:
     
     fig = plot_metrics(midfielders_per90 if metric_choice == "Por 90 minutos" else midfielders, metrics, metric_labels, per90=(metric_choice == "Por 90 minutos"))
     st.pyplot(fig)
-
-    # Guardar el gráfico en un buffer de memoria
+    
     buf = io.BytesIO()
     fig.savefig(buf, format="png", bbox_inches="tight", dpi=300)
     buf.seek(0)
-    
-    # Botón de descarga
     st.download_button("Descargar gráfico", buf, file_name="top5_mediocentros_L1.png", mime="image/png")
