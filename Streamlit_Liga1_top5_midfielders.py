@@ -163,7 +163,7 @@ if submit_button:
     buf.seek(0)
 
     # Botón de descarga
-    st.download_button("Descargar gráfico", buf, file_name="grafico.png", mime="image/png")
+    st.download_button("Descargar gráfico", buf, file_name="top5_mediocentros_L1.png", mime="image/png")
 
 
 st.markdown(
