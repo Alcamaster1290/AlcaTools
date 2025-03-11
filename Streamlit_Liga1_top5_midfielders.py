@@ -148,6 +148,7 @@ st.markdown(
     "Sígueme en mis redes: <a href='https://lnk.bio/alvarocc' target='_blank' style='color: lightblue;'>lnk.bio/alvarocc</a><br>"
     "IG: <a href='https://www.instagram.com/gronestatistics' target='_blank' style='color: lightblue;'>@gronestatistics</a> | "
     "X: <a href='https://www.x.com/alkagrone' target='_blank' style='color: lightblue;'>@alkagrone</a>"
+    "YT: <a href='https://www.youtube.com/@GroneStats' target='_blank' style='color: lightblue;'>@GroneStats</a>"
     "</p>",
     unsafe_allow_html=True
 )
